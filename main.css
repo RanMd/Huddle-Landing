@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+
+:root {
+    --dark-violet: hsl(257, 40%, 49%);
+    --soft-violet: hsl(300, 69%, 71%);
+    --font-headings: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+}
+
+body {
+    background-color: var(--dark-violet);
+    background-image: url(/images/bg-mobile.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    padding: 30px;
+}
+
+header .logo{
+    width: 30%;
+}
+
+main .table {
+    max-width: 80%;
+    margin-bottom: 5vh;
+}
+
+main h1 {
+    color: #fff;
+    width: 80%;
+    font-size: 2.1em;
+    letter-spacing: 1px;
+    font-family: var(--font-headings);
+}
+
+main p {
+    color: #eee;
+    font-size: 1.25em;
+    width: 70%;
+    line-height: 150%;
+    margin-top: 0;
+}
+
+main a {
+    background-color: #fff;
+    padding: 15px 80px 15px 80px;
+    border-radius: 45px;
+    text-decoration: none;
+    color: var(--dark-violet);
+    font-weight:lighter;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.295);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer ul {
+    display: flex;
+    margin: 60px;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13px;
+    height: 13px;
+    border: #fff 2px solid;
+    padding: 10px;
+    border-radius: 50%;
+    transition: border 0.3s, transform 0.3s;
+}
+
+footer ul li a {
+    color: white;
+    transition: color 0.3s;
+}
+
+/*---------------------------------------- HOVER ----------------------------------------------*/
+
+main a:hover {
+    background-color: var(--soft-violet);
+    color: #fff;
+}
+
+footer ul li:nth-child(1):hover a,
+footer ul li:nth-child(2):hover a,
+footer ul li:nth-child(3):hover a {
+    color: var(--soft-violet);
+}
+
+footer ul li:hover {
+    border: 2px solid var(--soft-violet);
+    transform: translateY(-20px);
+}
+
+
+@media (min-width: 1000px){
+
+    body {
+        background-image: url(/images/bg-desktop.svg);
+        background-size: cover;
+    }
+    main {
+        flex-direction: row;
+    }
+
+    main .content {
+        text-align:start;
+        align-items: flex-start;
+        padding-bottom: 40px;
+    }
+
+    main .table {
+        width: 45%;
+        margin: 30px;
+        margin-left: 45px;
+        margin-right: 60px;
+    }
+
+    footer ul {
+        margin: 0;
+        margin: 0 55px 60px 0;
+        justify-content: flex-end;
+    }
+
+    header .logo {
+        width: 20%;
+    }
+}
+
+
